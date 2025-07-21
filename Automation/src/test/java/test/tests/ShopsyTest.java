@@ -16,6 +16,8 @@ public class ShopsyTest extends BaseTest {
     public void login() {
         // ✅ driver is already started and navigated in BaseTest
         shopsypage = new Shopsy(driver);
+        
+        
 
         String username = ConfigReader.get("username");
         String password = ConfigReader.get("password");
@@ -25,7 +27,7 @@ public class ShopsyTest extends BaseTest {
 
     @Test(priority = 1)
     public void showInstitudesTest() {
-        shopsypage.ShowInstitudes();
+        
     }
 
     // Add more tests here

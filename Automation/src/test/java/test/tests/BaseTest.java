@@ -14,7 +14,8 @@ public class BaseTest {
     public void setup(ITestContext context) {
         driver = new ChromeDriver();        
      // ✅ Navigate to baseUrl
-        String baseUrl = ConfigReader.get("url");
+        String baseUrl = ConfigReader.get("baseUrl");
+        
         driver.get(baseUrl);
         driver.manage().window().maximize();
 

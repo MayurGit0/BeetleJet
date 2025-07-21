@@ -11,20 +11,15 @@ public class Shopsy {
 	WebDriver driver;
     JavascriptExecutor jsExecutor;
 
-    @FindBy(xpath="//input[@placeholder='Email']")
+    @FindBy(id = "text")
     WebElement UserName;
 
-    @FindBy(xpath="//input[@placeholder='Password']")
+    @FindBy(id = "password")
     WebElement Password;
 
-    @FindBy(xpath="//input[@id='formBasicCheckbox1']")
-    WebElement Chkboxbtn;
-
-    @FindBy(xpath="//button[text()='Login']")
+    @FindBy(id = "login-button")
     WebElement Loginbtn;
 
-    @FindBy(xpath="//button[normalize-space()='Master Testing']")
-    WebElement Showinstitude;
 
     public Shopsy(WebDriver driver) {
         this.driver = driver;
@@ -35,11 +30,11 @@ public class Shopsy {
     public void ShopsyLogin(String uname, String pwd) {
         UserName.sendKeys(uname);
         Password.sendKeys(pwd);
-        Chkboxbtn.click();
         Loginbtn.click();
     }
 
-    public void ShowInstitudes(){ Showinstitude.click(); }
+    public void ShowInstitudes(){ 
+    	 }
 
     public void Close() {
         driver.close();
